@@ -1,7 +1,5 @@
 package download;
 
-import com.sun.jndi.toolkit.url.Uri;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -22,7 +20,7 @@ public class DownloadPage {
 
         try(
                 BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-                BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\MyPC\\Desktop\\kqct\\NotoSansKR-Bold.woff2"));
+                BufferedWriter writer = new BufferedWriter(new FileWriter("kqct\\NotoSansKR-Bold.woff2"));
         ) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -35,5 +33,6 @@ public class DownloadPage {
     private String getFileName(URL url) throws MalformedURLException {
         String path = url.getPath();
 
+        return null;
     }
 }

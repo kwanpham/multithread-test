@@ -34,11 +34,15 @@ public class ThreadPoolExecutorCrawlData {
         // 1000 request đến dồn dập, liền 1 phát, không nghỉ
         
         for (Element elementTemp : elements) {
-            executor.execute(new RequestHandler(elementTemp));
+            executor.execute(new DetailProductPage(elementTemp));
         }
 
         executor.shutdown();
 
+        while (!executor.isTerminated()) {
+            // Running ...
+        }
+        System.out.println("done");
        
 
     }

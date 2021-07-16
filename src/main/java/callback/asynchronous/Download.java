@@ -32,7 +32,7 @@ public class Download {
             public void run() {
                 URL url = null;
                 try {
-                    url = new URL(null,"http://i.ytimg.com/vi/qvYQXACJ4es/maxresdefault.jpg" , new sun.net.www.protocol.https.Handler());
+                    url = new URL(null,"http://i.ytimg.com/vi/qvYQXACJ4es/maxresdefault.jpg");
                     HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
                     conn.setDoInput(true);
                     conn.connect();
